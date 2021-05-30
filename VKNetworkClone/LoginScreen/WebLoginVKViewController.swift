@@ -34,7 +34,7 @@ class WebLoginVKViewController: UIViewController {
             URLQueryItem(name: "display", value: "mobile"),
             URLQueryItem(name: "redirect_uri", value:
                             "https://oauth.vk.com/blank.html"),
-            URLQueryItem(name: "scope", value: "262150"),
+            URLQueryItem(name: "scope", value: "offline,friends,photos,groups"),
             URLQueryItem(name: "response_type", value: "token"),
             URLQueryItem(name: "v", value: "5.68") ]
         let request = URLRequest(url: urlComponents.url!)
@@ -43,16 +43,16 @@ class WebLoginVKViewController: UIViewController {
     
     func getInfoRequests() {
         
-        AF.request("https://api.vk.com/method/friends.get?fields=nickname,city,online&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
-            print(response.value as Any)
+        AF.request("https://api.vk.com/method/friends.get?fields=online&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
+            print("FRIENDS",response.value as Any)
         }
         
-        AF.request("https://api.vk.com/method/groups.get?filter=groups&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
-            print(response.value as Any)
+        AF.request("https://api.vk.com/method/groups.get?extended=1&filter=groups&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
+            print("GROUPS",response.value as Any)
         }
         
         AF.request("https://api.vk.com/method/photos.get?album_id=wall&rev=0&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
-            print(response.value as Any)
+            print("IMAGES",response.value as Any)
         }
         
     }
