@@ -43,7 +43,7 @@ class WebLoginVKViewController: UIViewController {
     
     func getInfoRequests() {
         
-        AF.request("https://api.vk.com/method/friends.get?fields=online&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
+        AF.request("https://api.vk.com/method/friends.get?fields=online,photo_50,nickname&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
             print("FRIENDS",response.value as Any)
         }
         
@@ -83,6 +83,8 @@ extension WebLoginVKViewController: WKNavigationDelegate {
         decisionHandler(.cancel)
         
         Session.shared.token = token
+        
+        print("TOKEN \(Session.shared.token)")
         
         getInfoRequests()
     }
