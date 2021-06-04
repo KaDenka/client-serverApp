@@ -72,22 +72,14 @@ class SearchGroupsTableViewController: UITableViewController {
         return cell
     }
     
-    /*
-     // Override to support conditional editing of the table view.
-     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-     // Return false if you do not want the specified item to be editable.
-     return true
-     }
-     */
-    
-    //
-    
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
         let addAction = UIContextualAction(style: .normal, title: "Add") { (action, view, nil) in
+            
             var haveGroupInUserListFlag = false
             
             for group in GroupsDataStorage.shared.userGroupsArray {
-                if group == GroupsDataStorage.shared.globalGroupsArray[indexPath.row] {
+                if group.name == GroupsDataStorage.shared.globalGroupsArray[indexPath.row].name {
                     haveGroupInUserListFlag = true
                 }
             }

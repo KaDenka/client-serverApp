@@ -41,7 +41,7 @@ class FriendsTableViewCell: UITableViewCell {
     
     func configFriendCell(index: IndexPath) {
         if let avatar = usersDictionary[index.section].value[index.row].avatar {
-            avatarImage.userImage.image = avatar
+            //avatarImage.userImage.image = avatar
         } else { avatarImage.userImage.image = UIImage(named: "noUserAvatarImage")}
         lastNameLabel.text = usersDictionary[index.section].value[index.row].lastName
         firstNameLabel.text = usersDictionary[index.section].value[index.row].firstName

@@ -37,21 +37,21 @@ class GroupsTableViewCell: UITableViewCell {
     
     func configUserGroupsCell(index: IndexPath) {
         if let avatar = GroupsDataStorage.shared.userGroupsArray[index.row].avatar {
-            groupAvatar.image = avatar
+           // groupAvatar.image = avatar
         } else { groupAvatar.image = UIImage(named: "noGroupAvatarImage")}
         groupLabel.text = GroupsDataStorage.shared.userGroupsArray[index.row].name
     }
     
     func configGlobalGroupsCell(index: IndexPath) {
         if let avatar = GroupsDataStorage.shared.globalGroupsArray[index.row].avatar {
-            groupAvatar.image = avatar
+           // groupAvatar.image = avatar
         } else { groupAvatar.image = UIImage(named: "noGroupAvatarImage")}
         groupLabel.text = GroupsDataStorage.shared.globalGroupsArray[index.row].name
     }
     
     func configSearchedGroupsCell(index: IndexPath) {
         if let avatar = searchedGroups[index.row].avatar {
-            groupAvatar.image = avatar
+           // groupAvatar.image = avatar
         } else { groupAvatar.image = UIImage(named: "noGroupAvatarImage")}
         groupLabel.text = searchedGroups[index.row].name
     }

@@ -11,6 +11,9 @@ import WebKit
 
 
 class WebLoginVKViewController: UIViewController {
+    
+    let loginScreenToAppSegue = "loginScreenToApp"
+    
     @IBOutlet weak var logInView: WKWebView! {
         didSet {
             logInView.navigationDelegate = self
@@ -39,22 +42,6 @@ class WebLoginVKViewController: UIViewController {
             URLQueryItem(name: "v", value: "5.131") ]
         let request = URLRequest(url: urlComponents.url!)
         logInView.load(request)
-    }
-    
-    func getInfoRequests() {
-        
-        AF.request("https://api.vk.com/method/friends.get?fields=online,photo_50,nickname&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
-            print("FRIENDS",response.value as Any)
-        }
-        
-        AF.request("https://api.vk.com/method/groups.get?extended=1&filter=groups&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
-            print("GROUPS",response.value as Any)
-        }
-        
-        AF.request("https://api.vk.com/method/photos.get?album_id=wall&rev=0&access_token=\(Session.shared.token)&v=5.131").responseJSON{ response in
-            print("IMAGES",response.value as Any)
-        }
-        
     }
     
 }
@@ -86,6 +73,7 @@ extension WebLoginVKViewController: WKNavigationDelegate {
         
         print("TOKEN \(Session.shared.token)")
         
-        getInfoRequests()
+        performSegue(withIdentifier: loginScreenToAppSegue, sender: nil)
+        
     }
 }

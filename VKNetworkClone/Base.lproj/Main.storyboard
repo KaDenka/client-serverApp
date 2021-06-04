@@ -36,123 +36,12 @@
                     </view>
                     <connections>
                         <outlet property="logInView" destination="o24-Rd-RmZ" id="nlx-6t-VXf"/>
+                        <segue destination="8mY-X9-mY8" kind="presentation" identifier="loginScreenToApp" id="qEv-Ek-sAz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DK-ap-Hvz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4.3478260869565224" y="-609.375"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="VKNetworkClone" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTW-Ed-Ipj">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пользователь" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XkP-d7-KOh">
-                                        <rect key="frame" x="124.5" y="260" width="165.5" height="31.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите имя пользователя" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="po5-77-fCI">
-                                        <rect key="frame" x="50" y="311.5" width="314" height="38.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IUg-M6-i6v">
-                                        <rect key="frame" x="163" y="390" width="88.5" height="31.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="center" adjustsFontSizeToFit="NO" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="PPN-Ch-qgE">
-                                        <rect key="frame" x="50" y="441.5" width="314" height="38.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qd9-Df-zQV">
-                                        <rect key="frame" x="107" y="540" width="200" height="40"/>
-                                        <color key="backgroundColor" red="0.26990023260000001" green="0.40463024380000001" blue="0.55688172579999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="0Po-4b-R5L"/>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="kPY-KV-Dck"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <state key="normal" title="Войти">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="signInButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6R-SS-2Aq"/>
-                                        </connections>
-                                    </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_VK" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-08-sJa">
-                                        <rect key="frame" x="70" y="130" width="274" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="Tpg-v6-V8K"/>
-                                        </constraints>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uo7-an-YDi" customClass="ActivityIndicatorView" customModule="VKNetworkClone" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="300" width="414" height="167"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" red="0.85519913093379007" green="0.85106773416599402" blue="0.85933052770158613" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstItem="CbG-08-sJa" firstAttribute="centerX" secondItem="KTW-Ed-Ipj" secondAttribute="centerX" id="00d-Cf-3ef"/>
-                                    <constraint firstAttribute="bottom" secondItem="uo7-an-YDi" secondAttribute="bottom" constant="300" id="09K-RC-m8Q"/>
-                                    <constraint firstItem="Qd9-Df-zQV" firstAttribute="centerX" secondItem="KTW-Ed-Ipj" secondAttribute="centerX" id="5E5-XB-1Tk"/>
-                                    <constraint firstItem="po5-77-fCI" firstAttribute="centerX" secondItem="KTW-Ed-Ipj" secondAttribute="centerX" id="7Ut-MP-P5U"/>
-                                    <constraint firstItem="CbG-08-sJa" firstAttribute="leading" secondItem="KTW-Ed-Ipj" secondAttribute="leading" constant="70" id="AGT-aH-qRU"/>
-                                    <constraint firstItem="uo7-an-YDi" firstAttribute="leading" secondItem="KTW-Ed-Ipj" secondAttribute="leading" id="F9R-Yl-2jn"/>
-                                    <constraint firstItem="IUg-M6-i6v" firstAttribute="centerX" secondItem="KTW-Ed-Ipj" secondAttribute="centerX" id="GpX-UX-o1Q"/>
-                                    <constraint firstItem="po5-77-fCI" firstAttribute="top" secondItem="XkP-d7-KOh" secondAttribute="bottom" constant="20" id="HFE-lZ-aGt"/>
-                                    <constraint firstAttribute="trailing" secondItem="uo7-an-YDi" secondAttribute="trailing" id="Nba-bq-S7Z"/>
-                                    <constraint firstItem="CbG-08-sJa" firstAttribute="top" secondItem="KTW-Ed-Ipj" secondAttribute="top" constant="130" id="XQe-he-1gx"/>
-                                    <constraint firstItem="PPN-Ch-qgE" firstAttribute="centerX" secondItem="KTW-Ed-Ipj" secondAttribute="centerX" id="adr-DH-TcZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="Qd9-Df-zQV" secondAttribute="bottom" constant="187" id="eu1-QW-2A9"/>
-                                    <constraint firstItem="uo7-an-YDi" firstAttribute="top" secondItem="KTW-Ed-Ipj" secondAttribute="top" constant="300" id="fq7-EU-Tfl"/>
-                                    <constraint firstItem="IUg-M6-i6v" firstAttribute="top" secondItem="po5-77-fCI" secondAttribute="bottom" constant="40" id="hRX-jP-AOu"/>
-                                    <constraint firstItem="Qd9-Df-zQV" firstAttribute="top" secondItem="PPN-Ch-qgE" secondAttribute="bottom" constant="60" id="hq9-F5-yb2"/>
-                                    <constraint firstItem="po5-77-fCI" firstAttribute="leading" secondItem="KTW-Ed-Ipj" secondAttribute="leading" constant="50" id="jCv-sN-5Wt"/>
-                                    <constraint firstItem="PPN-Ch-qgE" firstAttribute="leading" secondItem="KTW-Ed-Ipj" secondAttribute="leading" constant="50" id="kVa-dg-MRv"/>
-                                    <constraint firstItem="PPN-Ch-qgE" firstAttribute="top" secondItem="IUg-M6-i6v" secondAttribute="bottom" constant="20" id="kVc-8x-Bhs"/>
-                                    <constraint firstItem="XkP-d7-KOh" firstAttribute="centerX" secondItem="KTW-Ed-Ipj" secondAttribute="centerX" id="ur0-Fs-Pzn"/>
-                                    <constraint firstAttribute="trailing" secondItem="po5-77-fCI" secondAttribute="trailing" constant="50" id="vNm-Ih-orG"/>
-                                    <constraint firstItem="XkP-d7-KOh" firstAttribute="top" secondItem="CbG-08-sJa" secondAttribute="bottom" constant="60" id="zwr-yh-ZRp"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="03a-yA-hGg"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="ivP-vh-TJg"/>
-                            </scrollView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="KTW-Ed-Ipj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Br6-vW-2oK"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KTW-Ed-Ipj" secondAttribute="trailing" id="EcY-4x-ecO"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KTW-Ed-Ipj" secondAttribute="bottom" id="fuw-Mg-yUv"/>
-                            <constraint firstItem="KTW-Ed-Ipj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="nHI-Qy-c76"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="activityIndicator" destination="uo7-an-YDi" id="VL8-hP-Rhv"/>
-                        <outlet property="appAvatar" destination="CbG-08-sJa" id="J1S-fx-NrE"/>
-                        <outlet property="loginInputField" destination="po5-77-fCI" id="6Q0-px-eMM"/>
-                        <outlet property="loginLabel" destination="XkP-d7-KOh" id="a4Y-r2-GRT"/>
-                        <outlet property="loginScrollView" destination="KTW-Ed-Ipj" id="zR3-nm-T3K"/>
-                        <outlet property="passwordInputField" destination="PPN-Ch-qgE" id="xzY-1O-aml"/>
-                        <outlet property="passwordLabel" destination="IUg-M6-i6v" id="XSK-Jt-WSl"/>
-                        <outlet property="signInButton" destination="Qd9-Df-zQV" id="KIK-Xz-xuU"/>
-                        <segue destination="8mY-X9-mY8" kind="presentation" identifier="loginScreenToApp" modalPresentationStyle="fullScreen" id="TZh-YP-Nxf"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
+            <point key="canvasLocation" x="-275" y="88"/>
         </scene>
         <!--App Tab Bar Controller-->
         <scene sceneID="TIQ-uo-6Wl">
@@ -182,7 +71,7 @@
                 <navigationController id="oW5-NT-Ppl" customClass="CustomNavigationController" customModule="VKNetworkClone" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" image="rectangle.stack.person.crop" catalog="system" id="jXH-4f-3PW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="guN-t3-lkR">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.23182553049999999" green="0.40431624649999998" blue="0.56864780189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -203,7 +92,7 @@
             <objects>
                 <tableViewController id="VP1-iy-Ue7" customClass="UserGroupsTableViewController" customModule="VKNetworkClone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="hse-uy-lmD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections/>
@@ -230,7 +119,7 @@
             <objects>
                 <tableViewController id="Y2T-JB-ZyL" customClass="SearchGroupsTableViewController" customModule="VKNetworkClone" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="TM9-4k-Bwd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="7by-5Z-Agy">
@@ -282,7 +171,7 @@
                 <navigationController modalTransitionStyle="flipHorizontal" id="NNL-xJ-ybU" customClass="CustomNavigationController" customModule="VKNetworkClone" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Друзья" image="person.3" catalog="system" id="BUZ-S0-42G"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bSv-5l-WYp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.23182553049999999" green="0.40431624649999998" blue="0.56864780189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -301,7 +190,7 @@
                 <navigationController id="dK3-n8-XGu" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Новости" image="newspaper" catalog="system" id="MYg-Xh-r8e"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="s8Y-nK-qpi">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.28663414720000002" green="0.48705476520000002" blue="0.63923573489999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -319,11 +208,11 @@
             <objects>
                 <viewController title="Новости" id="0Dc-Li-bL3" customClass="NewsViewController" customModule="VKNetworkClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xWj-lh-mfz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jws-nR-AYa">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="0Dc-Li-bL3" id="hfo-jB-WeL"/>
@@ -354,11 +243,11 @@
             <objects>
                 <viewController id="rKI-34-gbs" customClass="PhotoConteinersViewController" customModule="VKNetworkClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HlC-9D-UHX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9T-bG-UQb" customClass="PhotoConteiner" customModule="VKNetworkClone" customModuleProvider="target">
-                                <rect key="frame" x="10" y="98" width="394" height="352.5"/>
+                                <rect key="frame" x="10" y="66" width="394" height="341.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -385,11 +274,11 @@
             <objects>
                 <viewController id="sdG-hm-kAW" customClass="FriendsListViewController" customModule="VKNetworkClone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ruj-l9-qCW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cGK-Nu-Qui">
-                                <rect key="frame" x="0.0" y="88" width="348" height="725"/>
+                                <rect key="frame" x="0.0" y="56" width="348" height="703"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="sdG-hm-kAW" id="lyM-bp-juE"/>
@@ -397,7 +286,7 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XfD-oS-V0K" customClass="AlphabetControl" customModule="VKNetworkClone" customModuleProvider="target">
-                                <rect key="frame" x="356" y="244" width="58" height="405"/>
+                                <rect key="frame" x="356" y="212" width="58" height="383"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
@@ -427,7 +316,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo_VK" width="1566" height="363"/>
         <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="rectangle.stack.person.crop" catalog="system" width="128" height="122"/>
