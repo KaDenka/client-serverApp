@@ -6,8 +6,10 @@
 //
 
 import UIKit
+import Foundation
 
-class News: NSObject {
+class News {
+    
     let userName: String
     let newsText: String
     var newsPhoto: UIImage?

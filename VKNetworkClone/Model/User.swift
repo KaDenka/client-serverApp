@@ -6,23 +6,34 @@
 //
 
 import UIKit
+import Foundation
 
-class User: NSObject {
-    let lastName: String
-    let firstName: String
-    var fullName: String {
-        lastName + " " + firstName
-    }
-    var age: Int?
-    var avatar: UIImage?
-    var photoArray: [UIImage]?
+class User: Decodable {
     
-    init(lastName: String, firstName: String, age: Int?, avatar: UIImage?, photoArray: [UIImage]?) {
-        self.lastName = lastName
-        self.firstName = firstName
-        self.age = age
-        self.avatar = avatar
-        self.photoArray = photoArray
+    var lastName: String = ""
+    var firstName: String = ""
+    
+    var avatar: String?
+    var fullName: String { lastName + " " + firstName }
+    
+    enum CodingKeys: String, CodingKey {
+        case lastName = "last_name"
+        case firstName = "first_name"
+        case avatar = "photo_50"
     }
-
+    
+    convenience required init(from decoder: Decoder) throws {
+        try self.init(from: decoder)
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.lastName = try values.decode(String.self, forKey: .lastName)
+        self.firstName = try values.decode(String.self, forKey: .firstName)
+        self.avatar = try values.decode(String.self, forKey: .avatar)
+    }
+    
+//    init(lastName: String, firstName: String, avatar: String?) {
+//        self.lastName = lastName
+//        self.firstName = firstName
+//        self.avatar = avatar
+//    }
+    
 }

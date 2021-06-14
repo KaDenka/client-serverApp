@@ -6,14 +6,13 @@
 //
 
 import UIKit
+import Foundation
 
-class NewsDataStorage: NSObject {
+class NewsDataStorage {
     
     static let shared = NewsDataStorage()
     
-    private override init() {
-        super.init()
-    }
+    private init() {}
     
     var newsArray = [News]()
     

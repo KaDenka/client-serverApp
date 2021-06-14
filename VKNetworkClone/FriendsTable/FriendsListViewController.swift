@@ -43,8 +43,8 @@ class FriendsListViewController: UIViewController, AlphabetControlDelegate {
         guard segue.identifier == friendsToPhotoSegue else { return }
         guard let destination = segue.destination as? PhotoConteinersViewController else { return }
         guard let indexPath = self.friendsListTableView.indexPathForSelectedRow else {return}
-        guard let array = usersDictionary[indexPath.section].value[indexPath.row].photoArray else {return}
-        destination.images = array
+       // guard let array = usersDictionary[indexPath.section].value[indexPath.row].photoArray else {return}
+        //destination.images = array
     }
     
     
@@ -94,15 +94,15 @@ extension FriendsListViewController: UITableViewDataSource {
             cell.pushAnimation()
         }
         
-        if usersDictionary[indexPath.section].value[indexPath.row].photoArray != nil   {
-            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) { [self] in
-                performSegue(withIdentifier: friendsToPhotoSegue, sender: nil)
-            }
-        } else {
-            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) { [self] in
-                alertNoPhotoAvailable(alertText: "У этого пользователя нет фотографий.")
-            }
-        }
+//        if usersDictionary[indexPath.section].value[indexPath.row].photoArray != nil   {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) { [self] in
+//                performSegue(withIdentifier: friendsToPhotoSegue, sender: nil)
+//            }
+//        } else {
+//            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) { [self] in
+//                alertNoPhotoAvailable(alertText: "У этого пользователя нет фотографий.")
+//            }
+//        }
     }
     
 }
